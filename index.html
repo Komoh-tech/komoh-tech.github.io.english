@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#142d4e">
+<meta name="description" content="Personal English study planner and progress tracker: A2 to B1, B2 and IELTS 7.0+.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>English Study Manager</title>
+<style>
+:root{--navy:#142d4e;--blue:#2865a8;--teal:#1c8b80;--bg:#f3f6fa;--card:#fff;--ink:#17263a;--muted:#66758a;--line:#e2e8f0;--soft:#eaf1fa;--green:#19845b;--amber:#b7791f;--shadow:0 8px 24px #203a5710}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1050px;margin:auto;padding-bottom:88px}.top{background:linear-gradient(135deg,#142d4e,#235c91);color:white;padding:25px 20px 20px;border-radius:0 0 25px 25px}.topline{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:13px;opacity:.82;letter-spacing:.08em;text-transform:uppercase}.top h1{font-size:26px;line-height:1.15;margin:8px 0}.top p{margin:0;color:#dce9f8;font-size:14px}.level{display:inline-block;margin-top:14px;border:1px solid #ffffff55;border-radius:30px;padding:5px 11px;font-size:12px}.tabs{display:flex;gap:7px;overflow:auto;padding:13px 14px 5px;position:sticky;top:0;background:var(--bg);z-index:5}.tab{border:0;background:#e6ecf4;color:#40536c;border-radius:22px;padding:9px 14px;white-space:nowrap;font-weight:650;font-size:13px}.tab.active{background:var(--navy);color:white}.content{padding:12px 15px}.view{display:none}.view.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:15px;box-shadow:var(--shadow);margin-bottom:12px}.card h2,.card h3{margin:0 0 8px}.card h2{font-size:18px}.card h3{font-size:15px}.muted{color:var(--muted)}.small{font-size:12px}.metric{font-size:27px;font-weight:800;letter-spacing:-.04em}.progress{height:9px;border-radius:20px;background:#e8edf3;overflow:hidden;margin:9px 0}.progress span{display:block;height:100%;background:linear-gradient(90deg,#1c8b80,#4eaa91);border-radius:20px;width:0}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.btn{border:0;border-radius:11px;padding:10px 13px;background:var(--navy);color:white;font-weight:650}.btn.secondary{background:#eaf0f7;color:var(--navy)}.btn.outline{background:white;color:var(--navy);border:1px solid var(--line)}.btn.danger{background:#fff0f0;color:#a33}.btn.tiny{padding:6px 9px;font-size:12px}.seg{display:flex;background:#edf1f6;padding:4px;border-radius:12px;gap:3px}.seg button{flex:1;border:0;border-radius:9px;padding:8px 5px;background:transparent;color:#53657c;font-weight:650;font-size:13px}.seg button.active{background:white;color:var(--navy);box-shadow:0 2px 7px #17263a12}.daylist{display:grid;gap:9px}.day{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden}.dayhead{padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}.dayhead strong{display:block}.daybody{padding:0 14px 12px}.task{display:flex;gap:10px;padding:9px 0;border-top:1px solid #edf0f4;align-items:flex-start}.task input{width:19px;height:19px;accent-color:var(--teal);margin:2px 0 0;flex:none}.task.done .taskname{text-decoration:line-through;color:#8390a0}.taskname{font-weight:600}.taskmeta{font-size:12px;color:var(--muted)}.pill{font-size:11px;background:#edf3fa;color:#345574;border-radius:20px;padding:3px 8px;white-space:nowrap}.tag{font-size:11px;color:#236b61;background:#e5f5f0;border-radius:6px;padding:2px 6px}.field{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink)}textarea.field{min-height:85px;resize:vertical}.fieldlabel{display:block;font-size:12px;font-weight:700;color:#526176;margin:10px 0 5px}.resource{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.resource:last-child{border:0}.bookicon{width:42px;height:52px;border-radius:7px;background:#e7eef8;color:#244e7b;display:grid;place-items:center;font-weight:800;flex:none}.weekrow{display:flex;gap:8px;overflow:auto;padding:3px 0 10px}.weekchip{min-width:76px;border:1px solid var(--line);background:white;border-radius:12px;padding:9px;text-align:center}.weekchip.active{border:2px solid var(--blue);background:#eff6ff}.weekchip b{display:block;font-size:17px}.checkrow{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #edf0f4}.checkrow input{width:18px;height:18px;accent-color:var(--teal);margin-top:2px}.notice{background:#fff8e9;border:1px solid #f3dfb6;color:#77531c;border-radius:12px;padding:11px 13px;font-size:13px}.empty{text-align:center;padding:25px;color:var(--muted)}.footer{text-align:center;color:#8793a3;font-size:11px;padding:20px}.hidden{display:none!important}
+@media(min-width:700px){.top{padding:32px 34px}.top h1{font-size:32px}.content{padding:18px 22px}.tabs{padding-left:22px}.daylist{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:430px){.grid{gap:8px}.card{padding:12px}.metric{font-size:24px}.top h1{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="topline"><div><div class="brand">Personal learning dashboard</div><h1>English Study Manager</h1><p>Build your English, one focused session at a time.</p></div><div style="font-size:34px">📘</div></div>
+ <div class="level">A2 → B1 → B2 → IELTS 7.0+</div>
+</header>
+<nav class="tabs" aria-label="Main navigation">
+ <button class="tab active" data-view="dashboard">Overview</button><button class="tab" data-view="plan">Weekly plan</button><button class="tab" data-view="roadmap">12-week roadmap</button><button class="tab" data-view="resources">Resources</button><button class="tab" data-view="review">Review & notes</button><button class="tab" data-view="settings">Data & settings</button>
+</nav>
+<main class="content">
+<section id="dashboard" class="view active">
+ <div class="row" style="margin:4px 0 12px"><div><div class="muted small" id="todayLabel"></div><h2 style="margin:2px 0">Your progress</h2></div><button class="btn secondary tiny" onclick="go('plan')">Open today's plan →</button></div>
+ <div class="grid four">
+  <div class="card"><div class="muted small">This week's tasks</div><div class="metric" id="weekDone">0/0</div><div class="progress"><span id="weekBar"></span></div><div class="small muted">Completed</div></div>
+  <div class="card"><div class="muted small">Study days</div><div class="metric" id="daysDone">0/7</div><div class="small muted">This week</div></div>
+  <div class="card"><div class="muted small">Current phase</div><div class="metric" style="font-size:20px" id="phaseMetric">A2</div><div class="small muted">Foundation building</div></div>
+  <div class="card"><div class="muted small">Roadmap</div><div class="metric" id="roadMetric">1/12</div><div class="small muted">Current week</div></div>
+ </div>
+ <div class="card"><div class="row"><h2>Today's focus</h2><span class="pill" id="todayName"></span></div><div id="todayTasks"></div><button class="btn" style="width:100%;margin-top:10px" onclick="go('plan')">Manage weekly plan</button></div>
+ <div class="grid">
+  <div class="card"><h3>Weekly targets</h3><div id="targetSummary"></div></div>
+  <div class="card"><h3>Learning principles</h3><p class="small muted">Listen → understand → repeat → speak. Read → understand → summarise. Learn grammar and vocabulary, then use them in your own sentences.</p></div>
+ </div>
+</section>
+
+<section id="plan" class="view">
+ <div class="row"><div><h2>Weekly study plan</h2><div class="muted small">Check off activities as you complete them.</div></div><span class="pill">7-day cycle</span></div>
+ <div class="card">
+  <div class="row"><div><b>Daily time available</b><div class="small muted">Choose a schedule that fits today.</div></div></div>
+  <div class="seg" style="margin-top:10px"><button data-duration="30">30 min</button><button data-duration="60" class="active">60 min</button><button data-duration="120">120 min</button></div>
+  <div class="notice" style="margin-top:10px">The 30-minute plan protects consistency; 60 minutes is the standard routine; 120 minutes adds deeper practice and revision.</div>
+ </div>
+ <div class="row" style="margin:12px 0"><b>Week at a glance</b><span class="small muted" id="planProgress"></span></div>
+ <div class="daylist" id="dayList"></div>
+</section>
+
+<section id="roadmap" class="view">
+ <h2>12-week learning roadmap</h2><p class="muted small">A flexible progression, not a promise of automatic level advancement. Complete the outcomes before increasing difficulty.</p>
+ <div class="weekrow" id="weekPicker"></div>
+ <div class="card" id="weekDetail"></div>
+ <div class="card"><h3>Milestone guidance</h3><p class="small muted">A2 foundation → developing B1 → consolidated B1 → B1+ → preparation toward B2. IELTS-focused practice becomes more useful after your general English foundation is stronger.</p></div>
+</section>
+
+<section id="resources" class="view">
+ <h2>Your learning resources</h2><p class="muted small">Use each resource for its assigned role. Add your edition or current unit below.</p>
+ <div class="card" id="resourceList"></div>
+ <div class="card"><h3>Update your resource progress</h3>
+  <label class="fieldlabel">Resource</label><select class="field" id="resourceSelect"></select>
+  <label class="fieldlabel">Current unit / lesson / page</label><input class="field" id="resourceUnit" placeholder="e.g. Unit 12 or Lesson 4">
+  <label class="fieldlabel">Notes</label><input class="field" id="resourceNote" placeholder="What to study next">
+  <button class="btn" style="margin-top:10px" onclick="saveResource()">Save resource progress</button>
+  <div id="resourceSaved" class="small muted" style="margin-top:8px"></div>
+ </div>
+</section>
+
+<section id="review" class="view">
+ <h2>Weekly review & learning journal</h2><p class="muted small">Reflect on what you learned, not only how many tasks you checked.</p>
+ <div class="card">
+  <h3>Sunday self-assessment</h3>
+  <div id="reviewChecks"></div>
+  <label class="fieldlabel">What did I learn this week?</label><textarea class="field" id="learned" placeholder="Write a few sentences..."></textarea>
+  <label class="fieldlabel">What was difficult?</label><textarea class="field" id="difficult" placeholder="Grammar, listening, pronunciation, reading..."></textarea>
+  <label class="fieldlabel">Mistakes I want to correct</label><textarea class="field" id="mistakes" placeholder="Write the incorrect form and the corrected form..."></textarea>
+  <label class="fieldlabel">My priority for next week</label><textarea class="field" id="nextWeek" placeholder="One or two specific priorities..."></textarea>
+  <button class="btn" style="margin-top:12px" onclick="saveReview()">Save weekly review</button><span class="small muted" id="reviewSaved" style="margin-left:8px"></span>
+ </div>
+ <div class="card"><h3>Speaking recording log</h3><p class="small muted">Record audio using your phone's recorder, then note the topic and what to improve. This app does not record audio itself.</p>
+  <label class="fieldlabel">Speaking topic</label><input id="speakTopic" class="field" placeholder="e.g. Describe your daily routine">
+  <label class="fieldlabel">Duration (minutes)</label><input id="speakDuration" class="field" type="number" min="1" max="60" placeholder="3">
+  <label class="fieldlabel">Self-feedback</label><textarea id="speakFeedback" class="field" placeholder="Fluency, grammar, vocabulary, pronunciation..."></textarea>
+  <button class="btn" style="margin-top:10px" onclick="addSpeaking()">Add speaking session</button><div id="speakingLog" class="small" style="margin-top:12px"></div>
+ </div>
+</section>
+
+<section id="settings" class="view">
+ <h2>Data & settings</h2>
+ <div class="card"><h3>Study programme settings</h3>
+  <label class="fieldlabel">Your current level</label><select id="levelSelect" class="field"><option>A2</option><option>A2 developing</option><option>B1</option><option>B1 developing</option><option>B1+</option><option>B2</option><option>IELTS preparation</option></select>
+  <label class="fieldlabel">Current roadmap week (1–12)</label><input id="currentWeek" class="field" type="number" min="1" max="12">
+  <label class="fieldlabel">Week starts on</label><select id="weekStart" class="field"><option value="1">Monday</option><option value="0">Sunday</option></select>
+  <button class="btn" style="margin-top:12px" onclick="saveSettings()">Save settings</button>
+ </div>
+ <div class="card"><h3>Backup your progress</h3><p class="small muted">Your checkmarks, notes and resource progress are stored on this device/browser. Export a backup regularly, especially before clearing browser data or changing phones.</p>
+  <div class="row" style="flex-wrap:wrap"><button class="btn" onclick="exportData()">Export backup</button><label class="btn secondary" for="importFile">Import backup</label><input id="importFile" type="file" accept="application/json" class="hidden" onchange="importData(event)"></div>
+  <button class="btn danger" style="margin-top:12px" onclick="resetData()">Reset all progress</button>
+ </div>
+ <div class="notice">Privacy: no account or cloud sync is configured. Your study data stays in this browser's local storage unless you export and share a backup file.</div>
+</section>
+</main>
+<div class="footer">English Study Manager · Personal learning tool · Progress is saved on this device</div>
+</div>
+<script>
+const days = [
+ {name:"Monday",focus:"Grammar + Vocabulary + Speaking",tasks:[["Grammar in Use","Study one suitable grammar unit; read the explanation and examples, complete exercises, check answers, write 3 original sentences.",20,"Grammar"],["Vocabulary in Use","Study one unit; select 5–8 useful words or expressions and write example sentences.",15,"Vocabulary"],["Tactics for Listening: Basic","Preview the lesson, listen for general meaning, complete exercises and check answers.",15,"Listening"],["Speaking","Repeat useful sentences, answer lesson questions and record a 1–2 minute response.",10,"Speaking"]]},
+ {name:"Tuesday",focus:"Listening + Reading",tasks:[["Tactics for Listening: Basic","Listen for gist, listen for details, check difficult sections, use transcript if available and repeat 5–8 sentences.",25,"Listening"],["iStoria","Read a level-appropriate story: first for meaning, then check only important words and reread difficult parts.",20,"Reading"],["Vocabulary review","Review Monday's and Tuesday's useful expressions without looking at notes first.",5,"Vocabulary"],["Retell the story","Summarise the story aloud: characters, events, problem and what you learned.",10,"Speaking"]]},
+ {name:"Wednesday",focus:"Grammar + Writing",tasks:[["Grammar in Use","Study a second suitable unit, complete exercises and write 3 original examples.",20,"Grammar"],["Vocabulary in Use","Study one unit and focus on word meaning, collocations and usage.",15,"Vocabulary"],["Writing practice","Write an 80–100 word paragraph using this week's grammar and vocabulary.",20,"Writing"],["Error correction","Check verb tenses, agreement, articles, prepositions, word choice and spelling.",5,"Writing"]]},
+ {name:"Thursday",focus:"Listening + Speaking + Pronunciation",tasks:[["Tactics for Listening: Basic","Study a new lesson or revisit a difficult lesson; focus on understanding without the transcript.",25,"Listening"],["Shadowing","Choose a short dialogue, repeat sentence by sentence and imitate stress and intonation.",10,"Speaking"],["Speaking practice","Prepare ideas, answer questions, speak freely for 3–5 minutes and review your recording.",20,"Speaking"],["Vocabulary review","Review 5–10 useful expressions from the listening lesson.",5,"Vocabulary"]]},
+ {name:"Friday",focus:"Reading + Vocabulary + Speaking",tasks:[["iStoria","Read a new story or section; practise skimming, scanning and detailed reading.",25,"Reading"],["Vocabulary in Use","Study your third vocabulary unit of the week; select 5–8 useful items.",15,"Vocabulary"],["Discuss the reading","Give opinions, describe interesting parts and answer questions about the story.",15,"Speaking"],["Vocabulary revision","Test yourself on the week's new words and expressions.",5,"Vocabulary"]]},
+ {name:"Saturday",focus:"Integrated English practice",tasks:[["Listening revision","Replay one difficult Tactics lesson without the transcript, then check difficult parts.",15,"Listening"],["Grammar revision","Review both grammar units and complete a few additional exercises.",10,"Grammar"],["Speaking","Speak for 3–5 minutes about a weekly topic without reading prepared sentences.",15,"Speaking"],["Writing","Write 100–150 words: experience, opinion, story summary or problem and solution.",15,"Writing"],["Vocabulary revision","Test yourself on this week's vocabulary.",5,"Vocabulary"]]},
+ {name:"Sunday",focus:"Weekly review + assessment",tasks:[["Grammar test","Complete 10–15 questions and review incorrect answers.",10,"Review"],["Vocabulary test","Explain selected words and make original sentences without looking.",10,"Review"],["Listening assessment","Listen to a studied audio without transcript and identify the main idea and details.",10,"Review"],["Reading review","Summarise a previously read story without looking at the text.",10,"Review"],["Speaking assessment","Record a 3-minute response and evaluate fluency, grammar, vocabulary and pronunciation.",10,"Review"],["Weekly reflection","Write what you learned, what was difficult and what to improve next week.",10,"Review"]]}
+];
+const extra = {
+30: {
+"Monday":[["Grammar in Use","Study the key explanation and complete a short exercise.",15,"Grammar"],["Vocabulary in Use","Learn 3–5 useful expressions.",10,"Vocabulary"],["Speaking","Say 3–5 sentences using today's grammar or vocabulary.",5,"Speaking"]],
+"Tuesday":[["Listening","Listen once for meaning and once for details.",15,"Listening"],["iStoria","Read for general meaning.",10,"Reading"],["Review","Recall 3 useful expressions.",5,"Vocabulary"]],
+"Wednesday":[["Grammar","Review one grammar point and practise.",15,"Grammar"],["Writing","Write a 50–70 word paragraph.",10,"Writing"],["Correction","Correct your most important mistakes.",5,"Writing"]],
+"Thursday":[["Listening","Listen to a short section and check understanding.",15,"Listening"],["Speaking","Repeat and answer aloud.",10,"Speaking"],["Pronunciation","Shadow a few sentences.",5,"Speaking"]],
+"Friday":[["Reading","Read one short story section.",15,"Reading"],["Vocabulary","Review or learn a few words.",10,"Vocabulary"],["Speaking","Summarise what you read.",5,"Speaking"]],
+"Saturday":[["Listening","Replay a studied lesson.",10,"Listening"],["Speaking","Speak about the topic.",10,"Speaking"],["Writing","Write a short paragraph.",10,"Writing"]],
+"Sunday":[["Grammar + vocabulary","Test yourself on key points.",10,"Review"],["Listening","Replay a difficult section.",5,"Review"],["Reflection","Write what worked and what to improve.",15,"Review"]]
+},
+120: {
+"Monday":[["Grammar deep practice","Study the unit, complete exercises and write 5–8 examples.",35,"Grammar"],["Vocabulary in Use","Study a unit and practise collocations and examples.",25,"Vocabulary"],["Tactics for Listening","Complete the lesson and analyse difficult sections.",25,"Listening"],["Speaking","Shadow, answer questions and give a 3–5 minute response.",25,"Speaking"],["Review","Recall key points without looking.",10,"Review"]],
+"Tuesday":[["Tactics for Listening","Complete a lesson with gist, detail, transcript and replay stages.",30,"Listening"],["iStoria","Read a story and summarise it.",30,"Reading"],["Vocabulary review","Review recent words and collocations.",10,"Vocabulary"],["Speaking retelling","Retell the story and answer follow-up questions.",20,"Speaking"],["Extra reading","Read another short section for fluency.",20,"Reading"],["Notes","Record difficult language.",10,"Review"]],
+"Wednesday":[["Grammar","Study a unit and complete additional exercises.",30,"Grammar"],["Vocabulary in Use","Study one unit and create examples.",20,"Vocabulary"],["Writing","Write 100–150 words.",25,"Writing"],["Error correction","Correct grammar, vocabulary and sentence structure.",15,"Writing"],["Reading","Read a short text and identify main ideas.",20,"Reading"],["Review","Recall new language.",10,"Review"]],
+"Thursday":[["Listening","Complete a lesson and check transcript details.",30,"Listening"],["Shadowing","Practise dialogue rhythm, stress and intonation.",15,"Speaking"],["Speaking","Give a longer response and answer follow-up questions.",30,"Speaking"],["Vocabulary","Review expressions from the audio.",10,"Vocabulary"],["Pronunciation","Repeat difficult phrases and record yourself.",15,"Speaking"],["Reflection","Note strengths and weaknesses.",10,"Review"]],
+"Friday":[["iStoria","Read in detail and summarise.",30,"Reading"],["Vocabulary in Use","Study a unit.",20,"Vocabulary"],["Speaking","Discuss the story and express an opinion.",20,"Speaking"],["Reading strategies","Practise skimming, scanning and detailed reading.",20,"Reading"],["Oxford Word Skills","Optional supporting vocabulary practice.",20,"Vocabulary"],["Review","Test yourself on new expressions.",10,"Review"]],
+"Saturday":[["Listening revision","Replay a difficult lesson and shadow key sentences.",20,"Listening"],["Grammar revision","Review the week's grammar and test yourself.",15,"Grammar"],["Speaking","Speak for 5 minutes and review your recording.",25,"Speaking"],["Writing","Write 120–180 words and edit it.",25,"Writing"],["Vocabulary revision","Review this week's words.",15,"Vocabulary"],["Reading","Read for pleasure or fluency.",20,"Reading"]],
+"Sunday":[["Grammar test","Complete 15–20 questions and analyse errors.",15,"Review"],["Vocabulary test","Recall meanings, collocations and use.",15,"Review"],["Listening assessment","Listen without transcript and summarise.",15,"Review"],["Reading review","Summarise and answer comprehension questions.",15,"Review"],["Speaking assessment","Record a 3–5 minute response.",15,"Review"],["Writing review","Review one piece of writing and note recurring errors.",15,"Review"],["Weekly reflection","Plan the next week's priority.",15,"Review"],["Light review","Revisit difficult expressions.",15,"Review"]]
+}};
+const roadmap=[
+["Establish your routine","Build a consistent study habit and identify gaps.","Choose suitable A2-level units. Complete 2 grammar units, 2–3 vocabulary units, 3 listening lessons and 3 short readings.","Explain your daily routine; understand familiar short conversations; write a simple paragraph."],
+["Strengthen everyday A2","Improve basic sentence control and everyday vocabulary.","Practise present and past forms, questions, articles and common prepositions. Continue listening and graded reading.","Describe people, places and routines with clearer sentences."],
+["Build connected language","Move from isolated sentences to connected ideas.","Practise linking words, common verb patterns, collocations and short story retelling.","Speak for about 2 minutes on familiar topics; write a connected paragraph."],
+["Develop listening confidence","Understand more detail and natural connected speech.","Replay Tactics lessons, use transcripts strategically, shadow short sections and note common reductions.","Identify main ideas and key details in familiar conversations."],
+["Expand reading skills","Read longer texts with less dependence on translation.","Increase iStoria reading; practise skimming, scanning, guessing meaning from context and summarising.","Summarise a story and identify its main idea and supporting details."],
+["Develop B1 communication","Express opinions, reasons and experiences.","Practise past experiences, future plans, comparisons, modals and longer speaking turns.","Give an opinion with reasons and examples; write 100–120 words."],
+["Consolidate B1 grammar","Improve accuracy and reduce repeated errors.","Review weak grammar points, sentence structure, verb patterns and vocabulary collocations.","Use common structures more reliably in speaking and writing."],
+["Move toward more challenging texts","Build stamina and inferential reading.","Begin suitable Select Readings material if its level is comfortable; continue iStoria for fluency.","Understand longer texts and distinguish main ideas from details."],
+["Build B1+ fluency","Speak more spontaneously and develop ideas.","Use 3–5 minute speaking tasks, retelling, discussion and regular writing correction.","Develop answers with explanations, examples and connected ideas."],
+["Prepare for B2-level tasks","Increase complexity while protecting accuracy.","Use more challenging listening and reading, paraphrase ideas and practise longer writing.","Understand the main points of more demanding material on familiar topics."],
+["Assess readiness","Identify strengths and remaining gaps.","Complete mixed-skill practice, compare recordings and review error patterns.","Show more consistent independent use of English across all four skills."],
+["Bridge toward IELTS preparation","Decide which IELTS skills need focused preparation next.","Try introductory IELTS task formats and assess reading, listening, speaking and writing separately.","Set a realistic next-stage B2 and IELTS preparation plan."]
+];
+const resources=[
+["Grammar in Use","Main grammar course","Study 2 suitable units weekly. Read explanations, complete exercises, correct errors and write your own examples."],
+["English Vocabulary in Use","Main vocabulary course","Study about 3 units weekly. Prioritise useful words, collocations and original sentences."],
+["Oxford Word Skills","Supporting vocabulary","Use selectively for extra practice and reinforcement, not as a second full course."],
+["Tactics for Listening: Basic","Main listening and speaking topic source","Aim for 3–4 lessons weekly. Preview, listen, answer, check, shadow and discuss."],
+["iStoria","Current extensive-reading resource","Read about 3 sessions weekly. Focus on understanding and fluency rather than translating every word."],
+["Select Readings","Next-stage reading resource","Introduce gradually when the starting level feels manageable. Practise comprehension and reading strategies."],
+["Oxford Advanced Learner's Dictionary (OALD)","Dictionary and reference","Check meaning, pronunciation, part of speech, examples, collocations and usage."]
+];
+const targets=[["Grammar units",2],["Vocabulary units",3],["Listening lessons",3],["Reading sessions",3],["Speaking sessions",5],["Writing pieces",2]];
+const stateKey="englishStudyManager_v1";
+let state=load();
+function fresh(){return {checks:{},duration:60,currentWeek:1,level:"A2",weekStart:1,resourceProgress:{},reviews:{},speaking:[],targetCounts:{}}}
+function load(){try{return {...fresh(),...JSON.parse(localStorage.getItem(stateKey)||"{}")}}catch(e){return fresh()}}
+function save(){localStorage.setItem(stateKey,JSON.stringify(state));renderAll()}
+function dateKey(d=new Date()){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+function mondayKey(){let d=new Date();let start=Number(state.weekStart??1);let diff=(d.getDay()-start+7)%7;d.setDate(d.getDate()-diff);return dateKey(d)}
+function weekKey(){return mondayKey()}
+function tasksFor(day){return state.duration===60?days.find(x=>x.name===day).tasks:(extra[state.duration][day]||days.find(x=>x.name===day).tasks)}
+function dayIndex(){const names=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];return days.findIndex(d=>d.name===names[new Date().getDay()])}
+function key(day,i){return `${weekKey()}|${day}|${i}`}
+function countTasks(){let total=0,done=0,daysDone=0;days.forEach(d=>{let arr=tasksFor(d.name);let n=0;arr.forEach((t,i)=>{total++;if(state.checks[key(d.name,i)]){done++;n++}});if(n===arr.length&&arr.length)daysDone++});return {total,done,daysDone}}
+function go(id){document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id===id));document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.view===id));if(id==="plan")renderPlan();if(id==="dashboard")renderDashboard();window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>go(b.dataset.view)));
+document.querySelectorAll("[data-duration]").forEach(b=>b.addEventListener("click",()=>{state.duration=Number(b.dataset.duration);document.querySelectorAll("[data-duration]").forEach(x=>x.classList.toggle("active",x===b));save()}));
+function taskHTML(day,t,i,compact=false){let k=key(day,i),checked=!!state.checks[k];return `<div class="task ${checked?'done':''}"><input type="checkbox" ${checked?'checked':''} onchange="toggleTask('${encodeURIComponent(k)}',this.checked)"><div style="flex:1"><div class="row" style="align-items:flex-start"><span class="taskname">${t[0]}</span><span class="pill">${t[2]} min</span></div><div class="taskmeta">${t[1]}</div></div></div>`}
+function toggleTask(k,v){state.checks[decodeURIComponent(k)]=v;save()}
+function renderPlan(){let total=countTasks();document.getElementById("planProgress").textContent=`${total.done}/${total.total} completed`;document.getElementById("dayList").innerHTML=days.map((d,di)=>{let ts=tasksFor(d.name),done=ts.filter((t,i)=>state.checks[key(d.name,i)]).length;return `<article class="day"><div class="dayhead"><div><strong>${d.name}</strong><span class="small muted">${d.focus}</span></div><span class="pill">${done}/${ts.length}</span></div><div class="daybody">${ts.map((t,i)=>taskHTML(d.name,t,i)).join("")}</div></article>`}).join("");document.querySelectorAll("[data-duration]").forEach(b=>b.classList.toggle("active",Number(b.dataset.duration)===state.duration))}
+function renderDashboard(){let c=countTasks(),pct=c.total?Math.round(c.done/c.total*100):0;document.getElementById("todayLabel").textContent=new Intl.DateTimeFormat(undefined,{weekday:"long",month:"long",day:"numeric"}).format(new Date());document.getElementById("weekDone").textContent=`${c.done}/${c.total}`;document.getElementById("weekBar").style.width=pct+"%";document.getElementById("daysDone").textContent=`${c.daysDone}/7`;document.getElementById("phaseMetric").textContent=state.level;document.getElementById("roadMetric").textContent=`${state.currentWeek}/12`;let d=days[dayIndex()],ts=tasksFor(d.name);document.getElementById("todayName").textContent=d.name;document.getElementById("todayTasks").innerHTML=ts.map((t,i)=>taskHTML(d.name,t,i,true)).join("");const tc=state.targetCounts[weekKey()]||{};document.getElementById("targetSummary").innerHTML=targets.map(([n,v],i)=>{let val=Number(tc[i]||0),pct=Math.min(100,Math.round(val/v*100));return `<div style="margin:10px 0"><div class="row small"><span>${n}</span><b>${val}/${v}</b></div><div class="progress"><span style="width:${pct}%"></span></div><div class="row"><button class="btn tiny secondary" onclick="changeTarget(${i},-1)">−</button><button class="btn tiny secondary" onclick="changeTarget(${i},1)">+ Add completed</button></div></div>`}).join("")+`<div class="small muted">Tap “Add completed” whenever you finish a unit or session. Counts reset for each new study week, while past records remain saved.`} 
+function changeTarget(i,delta){let wk=weekKey();state.targetCounts[wk]=state.targetCounts[wk]||{};state.targetCounts[wk][i]=Math.max(0,Number(state.targetCounts[wk][i]||0)+delta);save()}
+function renderRoadmap(){document.getElementById("weekPicker").innerHTML=roadmap.map((w,i)=>`<button class="weekchip ${state.currentWeek===i+1?'active':''}" onclick="selectWeek(${i+1})"><span class="small muted">Week</span><b>${i+1}</b></button>`).join("");let w=roadmap[state.currentWeek-1];document.getElementById("weekDetail").innerHTML=`<div class="row"><span class="pill">WEEK ${state.currentWeek}</span><span class="tag">${state.currentWeek<=2?'A2 foundation':state.currentWeek<=6?'Developing B1':state.currentWeek<=9?'B1 consolidation':'B1+ to B2'}</span></div><h2 style="margin-top:12px">${w[0]}</h2><p>${w[1]}</p><h3>Study focus</h3><p class="small">${w[2]}</p><h3>Expected outcome</h3><p class="small">${w[3]}</p><div class="row" style="margin-top:15px"><button class="btn secondary" ${state.currentWeek===1?'disabled':''} onclick="selectWeek(${state.currentWeek-1})">← Previous</button><button class="btn" ${state.currentWeek===12?'disabled':''} onclick="selectWeek(${state.currentWeek+1})">Next week →</button></div>`}
+function selectWeek(n){state.currentWeek=n;save();renderRoadmap()}
+function renderResources(){document.getElementById("resourceList").innerHTML=resources.map((r,i)=>{let p=state.resourceProgress[i]||{};return `<div class="resource"><div class="bookicon">${String(i+1).padStart(2,"0")}</div><div style="flex:1"><b>${r[0]}</b><div class="small" style="color:#315d88">${r[1]}</div><div class="small muted">${r[2]}</div>${p.unit?`<div class="small" style="margin-top:5px"><b>Current:</b> ${escapeHTML(p.unit)} ${p.note?'· '+escapeHTML(p.note):''}</div>`:''}</div></div>`}).join("");document.getElementById("resourceSelect").innerHTML=resources.map((r,i)=>`<option value="${i}">${r[0]}</option>`).join("")}
+function saveResource(){let i=document.getElementById("resourceSelect").value;state.resourceProgress[i]={unit:document.getElementById("resourceUnit").value,note:document.getElementById("resourceNote").value};document.getElementById("resourceUnit").value="";document.getElementById("resourceNote").value="";save();document.getElementById("resourceSaved").textContent="Saved on this device."}
+const reviewLabels=["I reviewed this week's grammar.","I tested vocabulary without looking.","I replayed a difficult listening lesson.","I summarised something I read.","I reviewed a speaking recording.","I identified priorities for next week."];
+function renderReview(){let r=state.reviews[weekKey()]||{};document.getElementById("reviewChecks").innerHTML=reviewLabels.map((x,i)=>`<label class="checkrow"><input type="checkbox" id="rc${i}" ${r.checks?.[i]?'checked':''}><span>${x}</span></label>`).join("");["learned","difficult","mistakes","nextWeek"].forEach(k=>document.getElementById(k).value=r[k]||"");document.getElementById("speakingLog").innerHTML=(state.speaking||[]).slice().reverse().map(s=>`<div style="padding:8px 0;border-bottom:1px solid var(--line)"><b>${escapeHTML(s.topic)}</b> · ${escapeHTML(s.duration)} min<div class="muted">${escapeHTML(s.feedback)}</div><span class="small muted">${escapeHTML(s.date)}</span></div>`).join("")||'<span class="muted">No speaking sessions logged yet.</span>'}
+function saveReview(){let checks=reviewLabels.map((_,i)=>document.getElementById("rc"+i).checked);state.reviews[weekKey()]={checks,learned:document.getElementById("learned").value,difficult:document.getElementById("difficult").value,mistakes:document.getElementById("mistakes").value,nextWeek:document.getElementById("nextWeek").value};save();reviewSaved.textContent="Review saved."}
+function addSpeaking(){let topic=document.getElementById("speakTopic").value.trim();if(!topic){alert("Please enter a speaking topic.");return}state.speaking=state.speaking||[];state.speaking.push({topic,duration:document.getElementById("speakDuration").value||"—",feedback:document.getElementById("speakFeedback").value,date:dateKey()});document.getElementById("speakTopic").value="";document.getElementById("speakDuration").value="";document.getElementById("speakFeedback").value="";save();renderReview()}
+function renderSettings(){document.getElementById("levelSelect").value=state.level;document.getElementById("currentWeek").value=state.currentWeek;document.getElementById("weekStart").value=state.weekStart}
+function saveSettings(){state.level=document.getElementById("levelSelect").value;state.currentWeek=Math.max(1,Math.min(12,Number(document.getElementById("currentWeek").value)||1));state.weekStart=Number(document.getElementById("weekStart").value);save();alert("Settings saved.")}
+function exportData(){let blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="english-study-manager-backup.json";a.click();URL.revokeObjectURL(a.href)}
+function importData(e){let f=e.target.files[0];if(!f)return;let reader=new FileReader();reader.onload=()=>{try{let d=JSON.parse(reader.result);if(!d||typeof d!=="object"||!d.checks)throw Error();state={...fresh(),...d};save();renderAll();alert("Backup imported.")}catch(err){alert("This backup file is not valid.")}};reader.readAsText(f);e.target.value=""}
+function resetData(){if(confirm("This will erase all checkmarks, notes and progress stored in this browser. Export a backup first if you want to keep them. Continue?")){state=fresh();save();renderAll()}}
+function escapeHTML(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderAll(){renderDashboard();renderPlan();renderRoadmap();renderResources();renderReview();renderSettings()}
+renderAll();
+if("serviceWorker" in navigator && location.protocol!=="file:"){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}))}
+</script>
+</body></html>
